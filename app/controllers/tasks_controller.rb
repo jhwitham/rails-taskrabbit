@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :find_task, only: [:show, :edit, :update, :destroy]
   
   def index
   end
@@ -36,5 +37,6 @@ class TasksController < ApplicationController
       end
       
       def find_task
+        @task = Task.find(params[:id])
       end
 end
