@@ -7,9 +7,17 @@ class TasksController < ApplicationController
   end
   
   def new
+    @task = Task.new
   end
   
   def create
+    @task = Task.new(task_params)
+    
+    if @task.save
+      redirect_to @task
+    else
+      render "New"
+    end
   end
   
   def edit
@@ -24,6 +32,7 @@ class TasksController < ApplicationController
     private
       
       def task_params
+        params_require(:task).permit(:title, :description, :company, :url)
       end
       
       def find_task
