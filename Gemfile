@@ -13,6 +13,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'simple_form', '~> 3.0.2'
+gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'haml', '~> 4.0.5'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
